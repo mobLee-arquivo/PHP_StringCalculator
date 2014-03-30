@@ -11,19 +11,19 @@ class StringCalculatorTest extends PHPUnit_Framework_TestCase
         $this->stringCalculator = new StringCalculator();
     }
 
-    public function testStringVaziaRetornaZero()
+    public function testEmptyStringReturnsZero()
     {
         $sum = $this->stringCalculator->add('');
         $this->assertEquals(0, $sum);
     }
 
-    public function testStringDeUmNumeroRetornaNumero()
+    public function testOneNumberStringReturnsSameNumber()
     {
         $sum = $this->stringCalculator->add('1');
         $this->assertEquals(1, $sum);
     }
 
-    public function testStringDeDoisNumerosRetornaSoma()
+    public function testTwoNumbersStringReturnsNumbersSum()
     {
         $sum = $this->stringCalculator->add('1,2');
         $this->assertEquals(3, $sum);
