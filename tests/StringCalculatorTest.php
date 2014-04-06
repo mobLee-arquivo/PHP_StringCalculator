@@ -1,6 +1,6 @@
 <?php
 
-require_once('StringCalculator.php');
+require_once('../src/StringCalculator.php');
 
 class StringCalculatorTest extends PHPUnit_Framework_TestCase
 {
