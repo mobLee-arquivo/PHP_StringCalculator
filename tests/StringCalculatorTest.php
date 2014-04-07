@@ -35,6 +35,18 @@ class StringCalculatorTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(12, $sum);
     }
 
+    public function testAddMethodCanHandleLineBreaksAndCommas()
+    {
+        $sum = $this->stringCalculator->add('1\n2,3,4');
+        $this->assertEquals(10, $sum);
+    }
+
+    public function testAddMethodCanHandleCustomDelimiter()
+    {
+        $sum = $this->stringCalculator->add('//;\n1;2;3;4');
+        $this->assertEquals(10, $sum);
+    }
+
     protected function tearDown()
     {
         unset($this->stringCalculator);
