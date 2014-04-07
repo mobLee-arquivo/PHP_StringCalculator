@@ -1,19 +1,16 @@
 <?php
 
-class StringCalculator {
+class StringCalculator
+{
 
-    public function add( $numbers )
+    public function add($numbers)
     {
-
-        $glauco = explode( ',',$numbers );
+        $numbersList = explode(',', $numbers);
         $sum = 0;
-        foreach( $glauco as $item )
-        {
+        foreach ($numbersList as $item) {
             $sum += $item;
         }
-        return (int) $sum;
-
+        return (int)$sum;
     }
-
 
 }

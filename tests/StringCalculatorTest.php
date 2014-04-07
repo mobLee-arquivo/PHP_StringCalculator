@@ -29,6 +29,12 @@ class StringCalculatorTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(3, $sum);
     }
 
+    public function testAddMethodCanHandleMoreNumbers()
+    {
+        $sum = $this->stringCalculator->add('1,2,4,5');
+        $this->assertEquals(12, $sum);
+    }
+
     protected function tearDown()
     {
         unset($this->stringCalculator);
